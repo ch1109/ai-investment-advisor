@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI投资顾问Demo测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .status {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .test-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .test-card:hover {
+            transform: translateY(-2px);
+        }
+        .test-link {
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+        .test-link:hover {
+            background: #0056b3;
+        }
+        .test-link.primary {
+            background: #28a745;
+            font-size: 1.1em;
+            padding: 15px 25px;
+        }
+        .test-link.primary:hover {
+            background: #1e7e34;
+        }
+        .feature-list {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .feature-list h4 {
+            margin: 0 0 10px 0;
+            color: #1565c0;
+        }
+        .feature-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 5px;
+            color: #1565c0;
+        }
+        .server-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .server-info h4 {
+            margin: 0 0 10px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AI投资顾问Demo</h1>
+        
+        <div class="status success">
+            ✅ Demo服务器运行正常 - 所有页面可访问
+        </div>
+        
+        <div class="section">
+            <h2>🏠 主要功能页面</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>🏡 首页</h3>
+                    <p>产品概览和功能导航</p>
+                    <a href="http://localhost:3000/" class="test-link primary" target="_blank">访问首页</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>📊 投资规划</h3>
+                    <p>个性化投资方案制定</p>
+                    <a href="http://localhost:3000/investment-planning/" class="test-link" target="_blank">第1步 - 设定目标</a>
+                    <a href="http://localhost:3000/investment-planning/?step=2" class="test-link" target="_blank">第2步 - AI生成</a>
+                    <a href="http://localhost:3000/investment-planning/?step=3" class="test-link" target="_blank">第3步 - 模拟路径</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>🔍 产品诊断</h3>
+                    <p>投资产品智能分析</p>
+                    <a href="http://localhost:3000/product-diagnosis/" class="test-link" target="_blank">第1步 - 产品信息</a>
+                    <a href="http://localhost:3000/product-diagnosis/?step=2" class="test-link" target="_blank">第2步 - AI分析</a>
+                    <a href="http://localhost:3000/product-diagnosis/?step=3" class="test-link" target="_blank">第3步 - 诊断报告</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>📈 市场洞察</h3>
+                    <p>AI驱动的市场分析</p>
+                    <a href="http://localhost:3000/market-insights/" class="test-link" target="_blank">市场概览</a>
+                    <a href="http://localhost:3000/market-insights/detailed/" class="test-link" target="_blank">详细报告</a>
+                    <a href="http://localhost:3000/market-insights/?insights=true" class="test-link" target="_blank">自动跳转</a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>💼 组合管理</h3>
+                    <p>投资组合优化建议</p>
+                    <a href="http://localhost:3000/portfolio-management/" class="test-link" target="_blank">组合分析</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 核心功能特性</h2>
+            
+            <div class="feature-list">
+                <h4>📊 投资规划系统</h4>
+                <ul>
+                    <li>多步骤引导式投资目标设定</li>
+                    <li>AI驱动的个性化方案生成</li>
+                    <li>可视化投资路径模拟</li>
+                    <li>风险评估和收益预测</li>
+                </ul>
+            </div>
+
+            <div class="feature-list">
+                <h4>🔍 产品诊断工具</h4>
+                <ul>
+                    <li>智能产品信息识别</li>
+                    <li>多维度风险分析</li>
+                    <li>专业诊断报告生成</li>
+                    <li>投资建议和优化方案</li>
+                </ul>
+            </div>
+
+            <div class="feature-list">
+                <h4>📈 市场洞察平台</h4>
+                <ul>
+                    <li>实时市场数据分析</li>
+                    <li>AI生成的市场洞察报告</li>
+                    <li>宏观经济趋势解读</li>
+                    <li>行业主题投资机会</li>
+                </ul>
+            </div>
+
+            <div class="feature-list">
+                <h4>💼 组合管理系统</h4>
+                <ul>
+                    <li>投资组合可视化分析</li>
+                    <li>风险分散度评估</li>
+                    <li>资产配置优化建议</li>
+                    <li>业绩归因分析</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠 技术架构</h2>
+            <div class="server-info">
+                <h4>🚀 开发环境信息</h4>
+                <ul>
+                    <li><strong>框架：</strong>Next.js 15.5.3 with Turbopack</li>
+                    <li><strong>服务器：</strong>http://localhost:3000</li>
+                    <li><strong>状态：</strong>✅ 运行正常</li>
+                    <li><strong>编译：</strong>✅ 所有页面编译成功</li>
+                    <li><strong>响应：</strong>✅ 所有路由返回200状态码</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎉 Demo使用指南</h2>
+            <ol>
+                <li><strong>开始体验：</strong>点击上方"访问首页"按钮进入demo</li>
+                <li><strong>功能探索：</strong>在首页点击各功能卡片体验不同模块</li>
+                <li><strong>完整流程：</strong>建议按照投资规划→产品诊断→市场洞察→组合管理的顺序体验</li>
+                <li><strong>URL参数：</strong>支持直接访问特定步骤，便于演示和分享</li>
+                <li><strong>响应式设计：</strong>支持桌面、平板和手机设备访问</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

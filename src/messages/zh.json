@@ -1,0 +1,768 @@
+{
+  "Common": {
+    "appName": "AI 投顾",
+    "languageSwitcher": "语言选择"
+  },
+  "Navigation": {
+    "brand": "AI 投顾",
+    "home": "首页",
+    "investmentPlanning": "投资规划",
+    "portfolioManagement": "组合管理",
+    "marketInsights": "市场洞察",
+    "productDiagnosis": "产品诊断",
+    "mobileMenu": "打开导航菜单"
+  },
+  "Home": {
+    "hero": {
+      "title": "AI 投顾",
+      "subtitle": "您的智能投资决策伙伴，让财富增长更轻松"
+    },
+    "features": {
+      "learnMore": "点击了解详情",
+      "investmentPlanning": {
+        "title": "投资规划与模拟",
+        "description": "设定您的财务目标（如购房、退休），AI 将为您量身定制个性化的投资路径，并模拟未来收益，让您对未来了如指掌。"
+      },
+      "portfolioManagement": {
+        "title": "投资组合管理",
+        "description": "一站式管理您的所有资产。AI 将 7x24 小时监控您的持仓，提供风险预警、动态再平衡建议，并支持一键执行。"
+      },
+      "marketInsights": {
+        "title": "市场洞察",
+        "description": "AI 深度分析海量市场数据、新闻舆情，为您提炼出最关键的市场信号和投资机会，助您做出更理性的决策。"
+      },
+      "productDiagnosis": {
+        "title": "金融产品诊断",
+        "description": "面对复杂的金融产品不再迷茫。AI 为您深度剖析产品，识别隐藏风险，对比同类表现，找到最适合您的选择。"
+      }
+    }
+  },
+  "InvestmentPlanning": {
+    "hero": {
+      "title": "看得见的未来：为您的梦想规划投资蓝图",
+      "subtitle": "只需三步，即可生成您的专属养老/购房/教育金规划"
+    },
+    "steps": {
+      "goalSetting": {
+        "title": "设定目标",
+        "description": "告诉我们您的梦想"
+      },
+      "aiPlan": {
+        "title": "AI 生成规划",
+        "description": "AI 为您量身定制方案"
+      },
+      "projection": {
+        "title": "模拟未来路径",
+        "description": "模拟不同选择下的未来"
+      }
+    },
+    "stepHeading": "第{step}步：{title}",
+    "navigation": {
+      "previous": "上一步",
+      "next": "下一步",
+      "startDemo": "开始我的专属规划演示"
+    },
+    "step1": {
+      "heading": "选择您的财务目标",
+      "subheading": "告诉我们您想要实现的梦想，AI 将为您制定专属规划",
+      "goalSection": {
+        "title": "选择您的目标类型",
+        "popular": "热门",
+        "selected": "已选",
+        "options": {
+          "retirement": {
+            "title": "退休规划",
+            "description": "为舒适的退休生活做准备"
+          },
+          "house": {
+            "title": "购房计划",
+            "description": "实现拥有自己房子的梦想"
+          },
+          "education": {
+            "title": "教育金储备",
+            "description": "为孩子的教育投资未来"
+          },
+          "travel": {
+            "title": "旅行基金",
+            "description": "环游世界的梦想之旅"
+          },
+          "business": {
+            "title": "创业启动",
+            "description": "为创业梦想积累资金"
+          },
+          "emergency": {
+            "title": "应急基金",
+            "description": "建立财务安全保障"
+          }
+        }
+      },
+      "amountSection": {
+        "title": "设定目标金额",
+        "options": {
+          "50": {
+            "label": "50万",
+            "hint": "小目标"
+          },
+          "100": {
+            "label": "100万",
+            "hint": "稳健目标"
+          },
+          "200": {
+            "label": "200万",
+            "hint": "理想目标"
+          },
+          "500": {
+            "label": "500万",
+            "hint": "远大目标"
+          },
+          "1000": {
+            "label": "1000万",
+            "hint": "财务自由"
+          },
+          "2000": {
+            "label": "2000万",
+            "hint": "顶级目标"
+          },
+          "5000": {
+            "label": "5000万",
+            "hint": "超级富豪"
+          },
+          "custom": {
+            "label": "自定义",
+            "hint": "个性化"
+          }
+        }
+      },
+      "ageSection": {
+        "title": "您的当前年龄",
+        "options": {
+          "20_25": {
+            "label": "20-25岁",
+            "hint": "职场新人"
+          },
+          "26_30": {
+            "label": "26-30岁",
+            "hint": "事业起步"
+          },
+          "31_35": {
+            "label": "31-35岁",
+            "hint": "稳定发展"
+          },
+          "36_40": {
+            "label": "36-40岁",
+            "hint": "事业高峰"
+          },
+          "41_50": {
+            "label": "41-50岁",
+            "hint": "财富积累"
+          },
+          "50_plus": {
+            "label": "50岁以上",
+            "hint": "临近退休"
+          }
+        }
+      },
+      "riskSection": {
+        "title": "投资风险偏好",
+        "selected": "已选择",
+        "options": {
+          "conservative": {
+            "title": "保守型",
+            "description": "稳健为主，保本优先",
+            "riskLabel": "低风险",
+            "returnRange": "3-5%年化收益"
+          },
+          "balanced": {
+            "title": "平衡型",
+            "description": "风险收益平衡",
+            "riskLabel": "中等风险",
+            "returnRange": "5-8%年化收益"
+          },
+          "aggressive": {
+            "title": "积极型",
+            "description": "追求高收益",
+            "riskLabel": "高风险",
+            "returnRange": "8-15%年化收益"
+          }
+        }
+      },
+      "summary": {
+        "title": "您的选择总结",
+        "goalLabel": "财务目标",
+        "amountLabel": "目标金额",
+        "ageLabel": "当前年龄",
+        "riskLabel": "风险偏好",
+        "helper": "AI 将根据您的选择生成专属投资规划方案",
+        "cta": "开始生成我的专属规划",
+        "unselected": "未选择"
+      }
+    },
+    "step2": {
+      "loadingMessage": "AI 正在分析您的需求...",
+      "metrics": {
+        "successRate": "目标成功率",
+        "monthlyInvestment": "建议月定投"
+      },
+      "assetAllocationTitle": "推荐资产配置 - {risk}",
+      "tooltip": {
+        "investmentAmount": "配置金额"
+      },
+      "productRecommendations": {
+        "title": "推荐产品配置",
+        "subtitle": "基于您的风险偏好和投资目标，为您推荐以下具体产品",
+        "hoverHint": "悬停查看详细信息",
+        "monthlyInvestment": "每月投资"
+      },
+      "products": {
+        "conservative": {
+          "equityFunds": [
+            {
+              "name": "易方达上证50ETF联接",
+              "reason": "跟踪蓝筹指数，风险相对较低",
+              "expectedReturn": "6-8%"
+            },
+            {
+              "name": "华夏沪深300ETF联接",
+              "reason": "分散投资大盘股，稳健增长",
+              "expectedReturn": "5-7%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "博时信用债券",
+              "reason": "主投高等级信用债，收益稳定",
+              "expectedReturn": "4-6%"
+            },
+            {
+              "name": "南方中证10年期国债ETF",
+              "reason": "国债基金，安全性极高",
+              "expectedReturn": "3-5%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "余额宝（天弘增利宝）",
+              "reason": "流动性佳，随时可取",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "招商招钱宝货币",
+              "reason": "收益稳定，风险极低",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "博时黄金ETF联接",
+              "reason": "黄金避险，抗通胀",
+              "expectedReturn": "3-5%"
+            },
+            {
+              "name": "华夏中证REITs ETF",
+              "reason": "房地产投资信托，稳定分红",
+              "expectedReturn": "4-6%"
+            }
+          ]
+        },
+        "balanced": {
+          "equityFunds": [
+            {
+              "name": "兴全合润混合",
+              "reason": "攻守兼备，历史业绩优秀",
+              "expectedReturn": "8-12%"
+            },
+            {
+              "name": "富国天惠成长混合",
+              "reason": "成长价值并重，风险适中",
+              "expectedReturn": "7-11%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "易方达稳健收益债券",
+              "reason": "债券+少量股票，收益增强",
+              "expectedReturn": "5-7%"
+            },
+            {
+              "name": "广发纯债债券",
+              "reason": "纯债投资，收益稳定",
+              "expectedReturn": "4-6%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "天弘余额宝",
+              "reason": "便民理财，流动性好",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "建信现金添利货币",
+              "reason": "机构优选，收益较高",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "南方原油QDII",
+              "reason": "原油投资，分散化配置",
+              "expectedReturn": "5-8%"
+            },
+            {
+              "name": "华宝量化对冲混合",
+              "reason": "量化策略，降低波动",
+              "expectedReturn": "6-9%"
+            }
+          ]
+        },
+        "aggressive": {
+          "equityFunds": [
+            {
+              "name": "诺安成长混合",
+              "reason": "专注成长股，高收益潜力",
+              "expectedReturn": "10-15%"
+            },
+            {
+              "name": "银河创新成长混合",
+              "reason": "科技创新主题，成长性强",
+              "expectedReturn": "12-18%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "华富可转债债券",
+              "reason": "可转债投资，攻守兼备",
+              "expectedReturn": "6-10%"
+            },
+            {
+              "name": "中欧可转债债券",
+              "reason": "转债专家，收益弹性大",
+              "expectedReturn": "7-12%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "华夏现金增利货币",
+              "reason": "短期资金管理，灵活配置",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "汇添富现金宝货币",
+              "reason": "快速赎回，资金周转",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "嘉实原油QDII",
+              "reason": "商品投资，高风险高收益",
+              "expectedReturn": "8-15%"
+            },
+            {
+              "name": "南方中证500信息技术ETF",
+              "reason": "科技主题，成长潜力大",
+              "expectedReturn": "10-20%"
+            }
+          ]
+        }
+      }
+    },
+    "step3": {
+      "title": "未来收益预测",
+      "sliderLabel": "调整月定投金额：{amount}",
+      "tooltip": {
+        "valueLabel": "预测收益"
+      },
+      "chart": {
+        "yAxisTick": "¥{value}万",
+        "lines": {
+          "optimistic": "乐观情景",
+          "neutral": "中性情景",
+          "pessimistic": "悲观情景"
+        }
+      }
+    }
+  },
+  "PortfolioManagement": {
+    "hero": {
+      "title": "您的 7x24 小时智能投资管家",
+      "subtitle": "连接您的账户，让 AI 优化和守护您的每一分资产"
+    },
+    "overview": {
+      "title": "全景资产视图",
+      "subtitle": "所有资产，一目了然",
+      "metrics": {
+        "totalAssets": "总资产",
+        "todayPnL": "今日盈亏 ({percent})",
+        "riskScore": "风险评分"
+      },
+      "assetDistributionTitle": "资产分布",
+      "holdingsTitle": "持仓明细"
+    },
+    "risk": {
+      "title": "智能风险监控与持仓体检",
+      "subtitle": "AI 实时洞察投资组合健康状态",
+      "panelTitle": "持仓体检",
+      "actions": {
+        "healthCheck": "持仓体检",
+        "viewInsights": "查看调仓建议 >"
+      },
+      "healthCheck": {
+        "title": "体检完成",
+        "description": "整体风险状态稳定，建议关注波动较大的持仓。"
+      },
+      "reminders": {
+        "title": "行动提醒",
+        "subtitle": "及时掌握关键波动，主动把控投资节奏",
+        "priceMovement": {
+          "title": "基金/股票涨跌提醒",
+          "description": "当重点持仓涨跌幅超过阈值，第一时间推送到位。"
+        },
+        "marketShift": {
+          "title": "行情异动提醒",
+          "description": "捕捉指数或行业快速波动，帮助提前布局或防守。"
+        },
+        "riskAlert": {
+          "title": "风险提示",
+          "description": "仓位集中、回撤扩大等风险信号即时告知。"
+        }
+      },
+      "reminderSettings": {
+        "title": "提醒设置",
+        "selectPrompt": "点击上方的提醒类型以定制具体阈值和通知方式。",
+        "thresholdUnit": "%",
+        "phoneFallback": "预留手机号",
+        "errors": {
+          "phoneRequired": "请填写接收提醒的手机号。"
+        },
+        "types": {
+          "priceMovement": {
+            "subtitle": "设定单个基金/股票的涨跌提醒阈值，重要波动实时掌握。",
+            "thresholdLabel": "单日涨跌阈值",
+            "thresholdHint": "建议根据波动性设置在 3%-10% 之间。",
+            "phoneLabel": "接收手机号",
+            "phonePlaceholder": "请输入用于接收提醒的手机号",
+            "phoneHint": "将以短信方式推送，包含涨跌幅与持仓名称。",
+            "saveButton": "保存涨跌提醒",
+            "successMessage": "涨跌提醒已启用：当单日波动超过 {threshold}% 时，通知将发送至 {phone}。"
+          },
+          "marketShift": {
+            "subtitle": "关注指数或行业的快速异动，及时捕捉市场节奏。",
+            "thresholdLabel": "行情异动阈值",
+            "thresholdHint": "宽基或行业指数建议设置在 1%-5%。",
+            "phoneLabel": "接收手机号",
+            "phonePlaceholder": "请输入手机号码",
+            "phoneHint": "短信提醒将包含指数名称和异动方向。",
+            "saveButton": "保存行情异动提醒",
+            "successMessage": "行情异动提醒已保存：当异动幅度超过 {threshold}% 时，我们会短信通知 {phone}。"
+          },
+          "riskAlert": {
+            "subtitle": "监控仓位集中度、回撤等风控指标，提前预警风险。",
+            "thresholdLabel": "风险指标阈值",
+            "thresholdHint": "建议对回撤或集中度设置 8%-15% 的预警线。",
+            "phoneLabel": "风险提醒手机号",
+            "phonePlaceholder": "请输入风控联系人手机号",
+            "phoneHint": "我们将推送风险提示及深度分析链接。",
+            "saveButton": "保存风险提醒",
+            "successMessage": "风险提醒已更新：指标突破 {threshold}% 时，将立即通知 {phone}。"
+          }
+        }
+      },
+      "metrics": {
+        "health": {
+          "value": "健康",
+          "label": "整体风险状态"
+        },
+        "alignment": {
+          "label": "目标配置匹配度"
+        },
+        "coverage": {
+          "label": "监控资产数量"
+        }
+      }
+    },
+    "execution": {
+      "title": "一键执行",
+      "subtitle": "告别繁琐操作，一键优化",
+      "planTitle": "调仓方案预览",
+      "sell": "卖出：{name}",
+      "buy": "买入：{name}",
+      "executeButton": "一键执行",
+      "completedTitle": "交易已提交",
+      "completedMessage": "您的投资组合已成功优化"
+    },
+    "ctaButton": "开始我的投资组合管理演示"
+  },
+  "MarketInsights": {
+    "hero": {
+      "title": "纷繁市场，为您提炼真知灼见",
+      "subtitle": "AI 深度解读宏观数据与新闻，助您抓住市场脉搏"
+    },
+    "sentiment": {
+      "title": "市场情绪指数",
+      "subtitle": "量化市场情绪，拒绝追涨杀跌",
+      "levels": {
+        "fear": "恐慌",
+        "neutral": "中性",
+        "greed": "贪婪"
+      }
+    },
+    "events": {
+      "title": "AI 解读热点事件",
+      "subtitle": "从海量信息中挖掘核心观点",
+      "aiLabel": "AI 洞察"
+    },
+    "personalized": {
+      "title": "个性化机会推送",
+      "subtitle": "只看与你最相关的情报",
+      "sectionTitle": "与您的持仓相关",
+      "message": "您持有的「{holding}」发布超预期财报，AI 评级上调至「{rating}」。",
+      "ratingUpgrade": "增持",
+      "action": "建议关注后续表现"
+    },
+    "summary": {
+      "title": "一键总结重要新闻",
+      "subtitle": "AI 为您筛选、整理并提炼海量新闻，直击要点",
+      "buttonIdle": "一键生成本周市场洞察",
+      "buttonLoading": "AI 正在生成洞察..."
+    },
+    "ctaButton": "开始我的市场洞察演示"
+  },
+  "MarketInsightsDetailed": {
+    "header": {
+      "back": "返回市场洞察",
+      "title": "AI 市场洞察详细报告",
+      "subtitle": "基于最新市场数据和新闻的深度分析",
+      "generatedAt": "生成时间：{timestamp}"
+    },
+    "sections": {
+      "shared": {
+        "aiLabel": "AI 投顾建议",
+        "publishedAt": "发布时间：{date}",
+        "expand": "展开详情",
+        "collapse": "收起"
+      },
+      "macroPolicy": {
+        "title": "宏观经济与央行政策",
+        "subtitle": "聚焦内需驱动与全球货币政策分化，评估跨市场资产配置窗口。"
+      },
+      "industryGeopolitics": {
+        "title": "产业动态与地缘政治",
+        "subtitle": "梳理供应链再平衡与政府补贴红利，识别日本本土产业的策略机遇。"
+      },
+      "techRegulationSecurity": {
+        "title": "技术、监管与安全",
+        "subtitle": "从安全补丁到全球 AI 治理，构建纵深防御与合规服务新机会。"
+      },
+      "laborMarketStructure": {
+        "title": "劳动力与市场结构",
+        "subtitle": "剖析人力资本瓶颈与券商商业模式重构，寻找长期护城河。"
+      }
+    },
+    "actions": {
+      "title": "需要更多洞察？",
+      "subtitle": "AI 可以为您生成更多个性化的投资建议和市场分析",
+      "continue": "让 AI 继续生成洞察建议",
+      "back": "返回市场洞察",
+      "logMessage": "继续生成洞察..."
+    }
+  },
+  "ProductDiagnosis": {
+    "hero": {
+      "title": "告别选择困难，一键看透金融产品",
+      "subtitle": "无论是基金还是理财，AI 都为您提供专业的“体检报告”"
+    },
+    "steps": {
+      "input": "输入产品",
+      "report": "生成报告",
+      "recommendations": "智能推荐"
+    },
+    "search": {
+      "title": "输入产品，一键诊断",
+      "subtitle": "输入您关心的产品或代码，AI 将自动抓取数据并开始分析",
+      "placeholder": "请输入基金名称或代码，如：{example}",
+      "loading": "AI 正在分析...",
+      "cta": "开始诊断"
+    },
+    "analysis": {
+      "title": "AI 诊断报告：{name}",
+      "subtitle": "多维度拆解产品表现、风险与费用结构",
+      "overview": {
+        "overallScore": "综合评分",
+        "recommendedRating": "AI 推荐评级",
+        "recommendation": "增持",
+        "riskLevel": "风险等级"
+      },
+      "summaryTitle": "核心概览",
+      "metrics": {
+        "performance": "年化收益",
+        "maxDrawdown": "最大回撤",
+        "volatility": "年化波动",
+        "sharpe": "夏普比率"
+      },
+      "radar": {
+        "title": "与推荐方案对比",
+        "performance": "业绩表现",
+        "risk": "风险控制",
+        "cost": "费率水平",
+        "liquidity": "流动性",
+        "current": "当前产品",
+        "recommended": "推荐方案"
+      }
+    },
+    "recommendations": {
+      "title": "AI 精选替代方案",
+      "subtitle": "从同类产品中挑选表现稳定、费用友好的备选",
+      "scoreLabel": "综合评分：{score}",
+      "advantagesTitle": "优势亮点",
+      "metrics": {
+        "performance": "业绩",
+        "risk": "风险",
+        "cost": "费用",
+        "liquidity": "流动性"
+      }
+    },
+    "navigation": {
+      "previous": "上一步",
+      "next": "下一步",
+      "startDemo": "开始我的产品诊断演示"
+    }
+  },
+  "Data": {
+    "riskLevels": {
+      "conservative": "保守型",
+      "balanced": "稳健型",
+      "aggressive": "进取型"
+    },
+    "planning": {
+      "assetAllocation": {
+        "equityFunds": "股票基金",
+        "bondFunds": "债券基金",
+        "moneyMarket": "货币基金",
+        "alternative": "另类投资"
+      }
+    },
+    "portfolio": {
+      "assetDistribution": {
+        "stocks": "股票",
+        "funds": "基金",
+        "bonds": "债券",
+        "cash": "现金"
+      },
+      "holdings": {
+        "apple": "苹果公司",
+        "chinaGrowthFund": "华夏成长混合",
+        "tesla": "特斯拉"
+      }
+    },
+    "marketSentiment": {
+      "descriptions": {
+        "elevatedRisk": "当前市场情绪偏高，短期回调风险增加。"
+      }
+    },
+    "news": {
+      "categories": {
+        "monetaryPolicy": "货币政策",
+        "portfolioHoldings": "个人持仓"
+      },
+      "events": {
+        "centralBankRateCut": {
+          "title": "关于近期“央行降息”事件的 AI 解读",
+          "summary": "央行宣布降息25个基点，市场流动性进一步宽松",
+          "aiInsight": "降息利好股市和债市，建议关注利率敏感型板块如房地产、公用事业的投资机会。"
+        },
+        "portfolioFundEarnings": {
+          "title": "您持有的“华夏成长混合”发布超预期财报",
+          "summary": "基金重仓股业绩超预期，净值有望上涨",
+          "aiInsight": "AI 评级上调至“增持”，建议继续持有或适当加仓。"
+        }
+      },
+      "detailed": {
+        "macroPolicy": {
+          "gdpRevision": {
+            "title": "日本第二季度GDP上修至年化2.2%，内需成为增长核心",
+            "summary": "内阁府将第二季度GDP增速上修至年化2.2%，设备投资与个人消费展现韧性，经济动能正从出口向内需切换。",
+            "aiAdvice": "建议提高对零售、服务与企业数字化板块的配置权重，同时在宏观情景中纳入全球需求放缓对出口企业盈利的压力。",
+            "date": "2025年9月8日"
+          },
+          "fedRateCut": {
+            "title": "美联储开启降息周期，政策分化推高汇率波动",
+            "summary": "FOMC下调联邦基金利率25个基点，并暗示年内或再降两次，全球货币政策分化进一步扩大。",
+            "aiAdvice": "建议对冲美元/日元汇率敞口，并重新评估资产配置在政策分化情景下的风险预算。",
+            "date": "2025年9月17日"
+          }
+        },
+        "industryGeopolitics": {
+          "semiconductorTensions": {
+            "title": "美中半导体摩擦升级，供应链进入不可逆重构",
+            "summary": "美国拟对未回流产能的企业征收高关税，中国同步启动对美国半导体企业的调查，行业面临长期战略调整。",
+            "aiAdvice": "建议增持受日本政策扶持的本土半导体设备与材料商，并建立地缘风险监测清单管理供应链敞口。",
+            "date": "2025年9月15日"
+          },
+          "micronSubsidy": {
+            "title": "日本提供5360亿日元补贴支持美光扩产尖端存储",
+            "summary": "经产省资助美光升级广岛工厂，强化AI与自动驾驶所需存储芯片产能，巩固国内战略供应链。",
+            "aiAdvice": "关注美光本土供应链企业及其它可能获得政府补贴的战略性行业，提前布局“地缘政治资本开支”主题。",
+            "date": "2025年9月12日"
+          },
+          "jpEuEnergyAlliance": {
+            "title": "日欧能源对话聚焦安全的清洁能源供应链",
+            "summary": "日本与欧盟决定在风电、太阳能与氢能等领域深化合作，构建具韧性的跨区域清洁能源网络。",
+            "aiAdvice": "建议在ESG框架中纳入经济安全维度，筛选能够切入“安全绿色供应链”的企业建立长期持仓。",
+            "date": "2025年9月16日"
+          }
+        },
+        "techRegulationSecurity": {
+          "microsoftPatch": {
+            "title": "微软修复81个漏洞，两枚零日暴露即时风险",
+            "summary": "微软9月安全更新涵盖81个漏洞，其中9个为严重级别，零日漏洞可能已被利用。",
+            "aiAdvice": "建议立即部署补丁并加强运行环境监控，同时以此案例向客户强化持续安全运营服务的重要性。",
+            "date": "2025年9月9日"
+          },
+          "windowsEos": {
+            "title": "Windows 10将在2025年10月停止支持，企业面临安全迁移节点",
+            "summary": "微软明确Windows 10停止支持时间，未来漏洞将不再修复，全球企业掀起系统更新浪潮。",
+            "aiAdvice": "建议设计“安全工作场所现代化”整体方案，将操作系统迁移、安全架构升级与托管服务打包输出。",
+            "date": "2025年9月11日"
+          },
+          "unAiGovernance": {
+            "title": "联合国搭建全球AI治理双平台，监管框架成形",
+            "summary": "联合国成立独立科学小组与治理对话机制，为各国协调AI政策提供常设平台。",
+            "aiAdvice": "建议开发“AI治理即服务”产品，借助金融合规经验帮助客户应对跨国监管并转化为业务机会。",
+            "date": "2025年9月3日"
+          }
+        },
+        "laborMarketStructure": {
+          "skillsGap": {
+            "title": "调查揭示日美技能差距，日本员工学习意愿不足",
+            "summary": "Indeed调研显示29.3%的日本员工缺乏学习意愿，明显高于美国的3.7%，人力资本成为潜在增长瓶颈。",
+            "aiAdvice": "在中长期预测中将人力资本质量列为关键约束，并建议企业将再培训视为战略投资。",
+            "date": "2025年9月18日"
+          },
+          "zeroCommission": {
+            "title": "GMO Click证券推出零佣金，日本券商业模式加速重构",
+            "summary": "GMO Click宣布股票及基金交易全免佣，交易执行业务商品化趋势快速强化。",
+            "aiAdvice": "强调DIR在研究、咨询与技术解决方案的战略价值，聚焦不可被商品化的高附加值服务以支撑盈利。",
+            "date": "2025年9月"
+          }
+        }
+      }
+    },
+    "productDiagnosis": {
+      "names": {
+        "huaxiaGrowthFund": "华夏成长混合基金",
+        "yifangdaBluechipFund": "易方达蓝筹精选混合",
+        "fuguoGrowthFund": "富国天惠成长混合"
+      },
+      "summaries": {
+        "huaxiaGrowthFundSummary": "该基金在成长股投资方面表现优异，风险控制能力较强，适合中长期投资。"
+      },
+      "advantages": {
+        "lowerFees": "更低的费率",
+        "stablePerformance": "更稳定的业绩",
+        "betterRiskControl": "更优秀的风控",
+        "strongTrackRecord": "历史业绩优秀",
+        "experiencedManager": "基金经理经验丰富"
+      }
+    }
+  }
+}

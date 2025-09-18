@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL参数测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .test-link:hover {
+            background: #0056b3;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI投顾演示应用 - URL参数测试</h1>
+    
+    <div class="section">
+        <h2>投资规划页面 - 步骤测试</h2>
+        <p>点击下面的链接测试不同步骤的URL参数：</p>
+        <a href="http://localhost:3000/investment-planning/?step=1" class="test-link" target="_blank">第1步：设定目标</a>
+        <a href="http://localhost:3000/investment-planning/?step=2" class="test-link" target="_blank">第2步：AI生成规划</a>
+        <a href="http://localhost:3000/investment-planning/?step=3" class="test-link" target="_blank">第3步：模拟未来路径</a>
+    </div>
+
+    <div class="section">
+        <h2>产品诊断页面 - 步骤测试</h2>
+        <p>点击下面的链接测试不同步骤的URL参数：</p>
+        <a href="http://localhost:3000/product-diagnosis/?step=1" class="test-link" target="_blank">第1步：输入产品</a>
+        <a href="http://localhost:3000/product-diagnosis/?step=2" class="test-link" target="_blank">第2步：生成报告</a>
+        <a href="http://localhost:3000/product-diagnosis/?step=3" class="test-link" target="_blank">第3步：智能推荐</a>
+    </div>
+
+    <div class="section">
+        <h2>市场洞察页面 - 洞察生成测试</h2>
+        <p>点击下面的链接测试市场洞察功能：</p>
+        <a href="http://localhost:3000/market-insights/" class="test-link" target="_blank">市场洞察 - 初始状态</a>
+        <a href="http://localhost:3000/market-insights/?insights=true" class="test-link" target="_blank">市场洞察 - 自动跳转到详细页面</a>
+        <a href="http://localhost:3000/market-insights/detailed" class="test-link" target="_blank">市场洞察 - 详细报告页面</a>
+    </div>
+
+    <div class="section">
+        <h2>首页功能卡片 - 直接跳转测试</h2>
+        <p>测试从首页功能卡片直接跳转到特定状态：</p>
+        <a href="http://localhost:3000/" class="test-link" target="_blank">首页 - 查看功能卡片</a>
+        <p style="margin-top: 10px; font-size: 14px; color: #666;">
+            注意：首页的功能卡片现在会直接跳转到演示状态：<br>
+            • 投资规划 → 第2步（AI生成规划）<br>
+            • 市场洞察 → 详细报告页面<br>
+            • 产品诊断 → 第2步（生成报告）<br>
+            • 投资组合管理 → 正常页面
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>其他页面</h2>
+        <p>这些页面没有特殊参数：</p>
+        <a href="http://localhost:3000/portfolio-management/" class="test-link" target="_blank">投资组合管理</a>
+    </div>
+
+    <div class="section">
+        <h2>测试说明</h2>
+        <ul>
+            <li>每个链接都会在新标签页中打开</li>
+            <li>URL中的step参数会控制页面显示的步骤</li>
+            <li>URL中的insights=true参数会自动跳转到市场洞察详细页面</li>
+            <li>在页面内点击"下一步"、"上一步"或步骤导航时，URL会相应更新</li>
+            <li>在市场洞察页面点击"一键生成本周市场洞察"时，会跳转到详细报告页面</li>
+            <li>详细报告页面有"返回市场洞察"按钮可以回到主页面</li>
+            <li>您可以直接分享特定步骤或状态的URL给其他人</li>
+            <li>浏览器的前进/后退按钮也会正常工作</li>
+        </ul>
+    </div>
+</body>
+</html>

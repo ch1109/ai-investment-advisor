@@ -1,0 +1,768 @@
+{
+  "Common": {
+    "appName": "AI投資顧問",
+    "languageSwitcher": "言語を選択"
+  },
+  "Navigation": {
+    "brand": "AI投資顧問",
+    "home": "ホーム",
+    "investmentPlanning": "投資プランニング",
+    "portfolioManagement": "ポートフォリオ管理",
+    "marketInsights": "マーケット洞察",
+    "productDiagnosis": "商品診断",
+    "mobileMenu": "ナビゲーションメニューを開く"
+  },
+  "Home": {
+    "hero": {
+      "title": "AI投資顧問",
+      "subtitle": "あなたのスマートな投資判断パートナー。資産形成をもっと簡単に。"
+    },
+    "features": {
+      "learnMore": "詳しく見る",
+      "investmentPlanning": {
+        "title": "投資プランニングとシミュレーション",
+        "description": "住宅購入や退職などの目標を設定すると、AIがあなた専用の投資プランを作成し、将来のリターンをシミュレーションします。"
+      },
+      "portfolioManagement": {
+        "title": "ポートフォリオ管理",
+        "description": "すべての資産を一元管理。AIが24時間ポートフォリオを監視し、リスクアラートとリバランス提案を提供し、ワンクリックで実行できます。"
+      },
+      "marketInsights": {
+        "title": "マーケット洞察",
+        "description": "AIが膨大な市場データとニュースを分析し、重要なシグナルと投資機会を抽出。より合理的な意思決定を支援します。"
+      },
+      "productDiagnosis": {
+        "title": "金融商品の診断",
+        "description": "複雑な金融商品でも迷いません。AIが詳細に分析し、潜在リスクを特定。同業比較であなたに最適な選択を導きます。"
+      }
+    }
+  },
+  "InvestmentPlanning": {
+    "hero": {
+      "title": "将来を見据えた資産設計：あなたの夢に寄り添う投資プラン",
+      "subtitle": "わずか3ステップで、住宅・老後・教育資金のパーソナルプランを生成"
+    },
+    "steps": {
+      "goalSetting": {
+        "title": "目標の設定",
+        "description": "あなたの夢を教えてください"
+      },
+      "aiPlan": {
+        "title": "AIプラン生成",
+        "description": "AIが最適な提案を作成します"
+      },
+      "projection": {
+        "title": "将来シミュレーション",
+        "description": "さまざまな選択肢を比較検討"
+      }
+    },
+    "stepHeading": "ステップ{step}：{title}",
+    "navigation": {
+      "previous": "前へ",
+      "next": "次へ",
+      "startDemo": "専属プランのデモを開始"
+    },
+    "step1": {
+      "heading": "あなたの資産目標を選択",
+      "subheading": "叶えたい夢を教えてください。AIが専用プランを作成します。",
+      "goalSection": {
+        "title": "目標タイプを選択",
+        "popular": "人気",
+        "selected": "選択済み",
+        "options": {
+          "retirement": {
+            "title": "リタイアメントプラン",
+            "description": "安心できる老後資金を準備"
+          },
+          "house": {
+            "title": "住宅購入計画",
+            "description": "マイホームの夢をかなえる"
+          },
+          "education": {
+            "title": "教育資金の準備",
+            "description": "お子さまの未来に投資"
+          },
+          "travel": {
+            "title": "旅行資金",
+            "description": "世界を巡るための資金づくり"
+          },
+          "business": {
+            "title": "起業スタート",
+            "description": "ビジネス立ち上げの資金を貯める"
+          },
+          "emergency": {
+            "title": "緊急予備資金",
+            "description": "万一に備えた安全資金"
+          }
+        }
+      },
+      "amountSection": {
+        "title": "目標金額を設定",
+        "options": {
+          "50": {
+            "label": "50万",
+            "hint": "短期目標"
+          },
+          "100": {
+            "label": "100万",
+            "hint": "堅実な目標"
+          },
+          "200": {
+            "label": "200万",
+            "hint": "理想的"
+          },
+          "500": {
+            "label": "500万",
+            "hint": "大きな挑戦"
+          },
+          "1000": {
+            "label": "1000万",
+            "hint": "経済的自立"
+          },
+          "2000": {
+            "label": "2000万",
+            "hint": "アッパークラス"
+          },
+          "5000": {
+            "label": "5000万",
+            "hint": "富裕層レベル"
+          },
+          "custom": {
+            "label": "カスタム",
+            "hint": "自由入力"
+          }
+        }
+      },
+      "ageSection": {
+        "title": "現在の年齢",
+        "options": {
+          "20_25": {
+            "label": "20〜25歳",
+            "hint": "キャリア初期"
+          },
+          "26_30": {
+            "label": "26〜30歳",
+            "hint": "成長ステージ"
+          },
+          "31_35": {
+            "label": "31〜35歳",
+            "hint": "安定期"
+          },
+          "36_40": {
+            "label": "36〜40歳",
+            "hint": "キャリアのピーク"
+          },
+          "41_50": {
+            "label": "41〜50歳",
+            "hint": "資産形成期"
+          },
+          "50_plus": {
+            "label": "50歳以上",
+            "hint": "リタイア直前"
+          }
+        }
+      },
+      "riskSection": {
+        "title": "リスク許容度",
+        "selected": "選択済み",
+        "options": {
+          "conservative": {
+            "title": "安定重視",
+            "description": "元本保全を優先",
+            "riskLabel": "低リスク",
+            "returnRange": "年率3〜5%"
+          },
+          "balanced": {
+            "title": "バランス型",
+            "description": "リスクとリターンの均衡",
+            "riskLabel": "中リスク",
+            "returnRange": "年率5〜8%"
+          },
+          "aggressive": {
+            "title": "積極型",
+            "description": "高リターンを追求",
+            "riskLabel": "高リスク",
+            "returnRange": "年率8〜15%"
+          }
+        }
+      },
+      "summary": {
+        "title": "選択内容のサマリー",
+        "goalLabel": "資産目標",
+        "amountLabel": "目標金額",
+        "ageLabel": "現在年齢",
+        "riskLabel": "リスク許容度",
+        "helper": "AIがあなた専用の投資プランを生成します",
+        "cta": "プラン生成を開始",
+        "unselected": "未選択"
+      }
+    },
+    "step2": {
+      "loadingMessage": "AIが分析を実行中...",
+      "metrics": {
+        "successRate": "目標達成確率",
+        "monthlyInvestment": "推奨積立額"
+      },
+      "assetAllocationTitle": "推奨アセット配分 - {risk}",
+      "tooltip": {
+        "investmentAmount": "投資額"
+      },
+      "productRecommendations": {
+        "title": "推奨商品配分",
+        "subtitle": "リスク許容度と投資目標に基づき、具体的な商品を推奨します",
+        "hoverHint": "詳細情報はホバーで確認",
+        "monthlyInvestment": "月次投資額"
+      },
+      "products": {
+        "conservative": {
+          "equityFunds": [
+            {
+              "name": "eMAXIS Slim 日経225",
+              "reason": "日経平均に連動、安定した成長",
+              "expectedReturn": "6-8%"
+            },
+            {
+              "name": "ニッセイTOPIXインデックス",
+              "reason": "東証全体に分散投資、リスク分散",
+              "expectedReturn": "5-7%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "三菱UFJ国際-eMAXIS Slim 国内債券",
+              "reason": "国内債券中心、安定収益",
+              "expectedReturn": "4-6%"
+            },
+            {
+              "name": "野村インデックス国債",
+              "reason": "国債専門、最高の安全性",
+              "expectedReturn": "3-5%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "三井住友・短期金融市場",
+              "reason": "高い流動性、いつでも換金可能",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "大和証券マネーマーケット",
+              "reason": "安定収益、極低リスク",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "SPDRゴールドETF",
+              "reason": "金投資でリスクヘッジ",
+              "expectedReturn": "3-5%"
+            },
+            {
+              "name": "東証REIT指数連動型",
+              "reason": "不動産投資信託、安定配当",
+              "expectedReturn": "4-6%"
+            }
+          ]
+        },
+        "balanced": {
+          "equityFunds": [
+            {
+              "name": "ひふみプラス",
+              "reason": "バランス重視、優秀な運用実績",
+              "expectedReturn": "8-12%"
+            },
+            {
+              "name": "フィデリティ・日本成長株",
+              "reason": "成長と価値のバランス、適度なリスク",
+              "expectedReturn": "7-11%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "野村総合収益債券",
+              "reason": "債券+少量株式、収益向上",
+              "expectedReturn": "5-7%"
+            },
+            {
+              "name": "大和住銀DC国内債券",
+              "reason": "純債券投資、安定収益",
+              "expectedReturn": "4-6%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "三菱UFJ MRF",
+              "reason": "利便性重視、高い流動性",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "野村MRFプライム",
+              "reason": "機関投資家向け、高収益",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "WTI原油価格連動型ETN",
+              "reason": "原油投資、分散効果",
+              "expectedReturn": "5-8%"
+            },
+            {
+              "name": "日興クオンツ・アクティブ",
+              "reason": "量的戦略、ボラティリティ抑制",
+              "expectedReturn": "6-9%"
+            }
+          ]
+        },
+        "aggressive": {
+          "equityFunds": [
+            {
+              "name": "SBI中小型割安成長株",
+              "reason": "成長株専門、高収益ポテンシャル",
+              "expectedReturn": "10-15%"
+            },
+            {
+              "name": "テクノロジー株アクティブ",
+              "reason": "技術革新テーマ、高成長性",
+              "expectedReturn": "12-18%"
+            }
+          ],
+          "bondFunds": [
+            {
+              "name": "野村転換社債投信",
+              "reason": "転換社債投資、攻守兼備",
+              "expectedReturn": "6-10%"
+            },
+            {
+              "name": "大和CB戦略ファンド",
+              "reason": "CB専門、収益弾力性",
+              "expectedReturn": "7-12%"
+            }
+          ],
+          "moneyMarket": [
+            {
+              "name": "日興マネープール",
+              "reason": "短期資金管理、柔軟配分",
+              "expectedReturn": "2-3%"
+            },
+            {
+              "name": "三井住友キャッシュ",
+              "reason": "迅速換金、資金回転",
+              "expectedReturn": "2-3%"
+            }
+          ],
+          "alternative": [
+            {
+              "name": "コモディティ戦略ファンド",
+              "reason": "商品投資、ハイリスク・ハイリターン",
+              "expectedReturn": "8-15%"
+            },
+            {
+              "name": "日経500テクノロジーETF",
+              "reason": "テクノロジーテーマ、成長ポテンシャル",
+              "expectedReturn": "10-20%"
+            }
+          ]
+        }
+      }
+    },
+    "step3": {
+      "title": "将来リターンの予測",
+      "sliderLabel": "毎月の積立額を調整：{amount}",
+      "tooltip": {
+        "valueLabel": "予測リターン"
+      },
+      "chart": {
+        "yAxisTick": "¥{value}万",
+        "lines": {
+          "optimistic": "強気シナリオ",
+          "neutral": "標準シナリオ",
+          "pessimistic": "慎重シナリオ"
+        }
+      }
+    }
+  },
+  "PortfolioManagement": {
+    "hero": {
+      "title": "24時間体制のスマート投資コンシェルジュ",
+      "subtitle": "口座を連携し、AIが資産を最適化しながら守ります"
+    },
+    "overview": {
+      "title": "ポートフォリオ全体像",
+      "subtitle": "すべての資産を一目で把握",
+      "metrics": {
+        "totalAssets": "総資産額",
+        "todayPnL": "本日の損益（{percent}）",
+        "riskScore": "リスクスコア"
+      },
+      "assetDistributionTitle": "資産配分",
+      "holdingsTitle": "保有資産の明細"
+    },
+    "risk": {
+      "title": "スマートリスク監視と保有資産ヘルスチェック",
+      "subtitle": "AIがポートフォリオの健康状態をリアルタイムで可視化",
+      "panelTitle": "保有資産ヘルスチェック",
+      "actions": {
+        "healthCheck": "保有資産ヘルスチェック",
+        "viewInsights": "調整提案を見る >"
+      },
+      "healthCheck": {
+        "title": "チェック完了",
+        "description": "ポートフォリオは安定しています。値動きの大きい資産に注目しましょう。"
+      },
+      "reminders": {
+        "title": "アクションリマインダー",
+        "subtitle": "重要な変動を逃さず主体的に対応",
+        "priceMovement": {
+          "title": "ファンド／株価変動通知",
+          "description": "主要銘柄の上昇・下落が閾値を超えると即時にお知らせします。"
+        },
+        "marketShift": {
+          "title": "相場急変アラート",
+          "description": "指数やセクターの急なボラティリティを検知し、先手の判断を支援します。"
+        },
+        "riskAlert": {
+          "title": "リスク警告",
+          "description": "集中度やドローダウン拡大などのリスクシグナルを即座に通知します。"
+        }
+      },
+      "reminderSettings": {
+        "title": "リマインダー設定",
+        "selectPrompt": "上部のリマインダータイプを選択して詳細を設定してください。",
+        "thresholdUnit": "%",
+        "phoneFallback": "登録済み番号",
+        "errors": {
+          "phoneRequired": "通知先の携帯番号を入力してください。"
+        },
+        "types": {
+          "priceMovement": {
+            "subtitle": "個別ファンド／株の値動きを基にした通知を設定します。",
+            "thresholdLabel": "1日変動率の閾値",
+            "thresholdHint": "ボラティリティに合わせて3〜10%の設定がおすすめです。",
+            "phoneLabel": "通知先の携帯番号",
+            "phonePlaceholder": "通知を受け取る携帯番号を入力",
+            "phoneHint": "SMSで銘柄名と変動方向をお送りします。",
+            "saveButton": "値動き通知を保存",
+            "successMessage": "設定完了：1日変動率が {threshold}% を超えると {phone} に通知します。"
+          },
+          "marketShift": {
+            "subtitle": "指数やセクター全体の急変をキャッチする通知です。",
+            "thresholdLabel": "指数変動閾値",
+            "thresholdHint": "広範指数の場合は1〜5%を目安に設定してください。",
+            "phoneLabel": "通知先の携帯番号",
+            "phonePlaceholder": "通知を受け取る携帯番号を入力",
+            "phoneHint": "SMSには指数名と変動方向を記載します。",
+            "saveButton": "相場急変通知を保存",
+            "successMessage": "設定完了：変動率が {threshold}% を超えた場合、{phone} にお知らせします。"
+          },
+          "riskAlert": {
+            "subtitle": "ポートフォリオの集中度やドローダウン拡大を監視する通知です。",
+            "thresholdLabel": "リスク指標の閾値",
+            "thresholdHint": "8〜15%のドローダウンや集中度上限での設定を推奨します。",
+            "phoneLabel": "リスク通知先の番号",
+            "phonePlaceholder": "連絡を受ける携帯番号を入力",
+            "phoneHint": "SMSでリスクレポートへのリンクを送付します。",
+            "saveButton": "リスク通知を保存",
+            "successMessage": "設定完了：指標が {threshold}% を超えると {phone} に即時通知します。"
+          }
+        }
+      },
+      "metrics": {
+        "health": {
+          "value": "良好",
+          "label": "総合リスク状態"
+        },
+        "alignment": {
+          "label": "目標配分との一致度"
+        },
+        "coverage": {
+          "label": "監視対象資産数"
+        }
+      }
+    },
+    "execution": {
+      "title": "ワンクリック実行",
+      "subtitle": "煩雑な操作なしで即時リバランス",
+      "planTitle": "提案中のリバランス案",
+      "sell": "売却：{name}",
+      "buy": "購入：{name}",
+      "executeButton": "ワンクリックで実行",
+      "completedTitle": "取引を送信しました",
+      "completedMessage": "ポートフォリオが最適化されました"
+    },
+    "ctaButton": "ポートフォリオ管理デモを開始"
+  },
+  "MarketInsights": {
+    "hero": {
+      "title": "複雑な市場動向を核心だけに整理",
+      "subtitle": "AIがマクロデータとニュースを深掘りし、市場の鼓動を読み解きます"
+    },
+    "sentiment": {
+      "title": "市場センチメント指数",
+      "subtitle": "感情を数値化し、買い遅れ・売り急ぎを回避",
+      "levels": {
+        "fear": "恐怖",
+        "neutral": "ニュートラル",
+        "greed": "強気"
+      }
+    },
+    "events": {
+      "title": "AIが読み解く注目トピック",
+      "subtitle": "膨大な情報から要点だけを抽出",
+      "aiLabel": "AI洞察"
+    },
+    "personalized": {
+      "title": "パーソナライズされた機会の通知",
+      "subtitle": "あなたに関連する情報だけをお届け",
+      "sectionTitle": "保有銘柄に関するアラート",
+      "message": "保有中の「{holding}」が好決算を発表し、AI評価が「{rating}」に引き上げられました。",
+      "ratingUpgrade": "増やす",
+      "action": "今後の値動きに注目しましょう"
+    },
+    "summary": {
+      "title": "重要ニュースをワンクリックで要約",
+      "subtitle": "AIが膨大なニュースをスクリーニングし要点を整理",
+      "buttonIdle": "今週のマーケット洞察を生成",
+      "buttonLoading": "AIが洞察を生成中..."
+    },
+    "ctaButton": "マーケット洞察デモを開始"
+  },
+  "MarketInsightsDetailed": {
+    "header": {
+      "back": "マーケット洞察に戻る",
+      "title": "AIマーケット洞察 詳細レポート",
+      "subtitle": "最新の市場データとニュースに基づく深掘り分析",
+      "generatedAt": "生成日時：{timestamp}"
+    },
+    "sections": {
+      "shared": {
+        "aiLabel": "AIによる提案",
+        "publishedAt": "発表日：{date}",
+        "expand": "詳細を展開",
+        "collapse": "折りたたむ"
+      },
+      "macroPolicy": {
+        "title": "マクロ経済と中央銀行政策",
+        "subtitle": "内需主導への転換と金融政策の分化を同時に捉え、クロスマーケットの配分機会を評価。"
+      },
+      "industryGeopolitics": {
+        "title": "産業動向と地政学",
+        "subtitle": "サプライチェーン再編と政策支援を整理し、日本企業の戦略的チャンスを抽出。"
+      },
+      "techRegulationSecurity": {
+        "title": "テクノロジー・規制・セキュリティ",
+        "subtitle": "サイバー防御からAIガバナンスまで、統合的なリスク対応と新たなサービス需要を把握。"
+      },
+      "laborMarketStructure": {
+        "title": "労働力と市場構造",
+        "subtitle": "人材力の制約と証券ビジネスの再定義を分析し、中長期の競争優位を見極める。"
+      }
+    },
+    "actions": {
+      "title": "さらに洞察が必要ですか？",
+      "subtitle": "AIがあなた向けの投資提案と市場分析を追加生成できます",
+      "continue": "AIに洞察の生成を続けさせる",
+      "back": "マーケット洞察に戻る",
+      "logMessage": "追加の洞察を生成しています..."
+    }
+  },
+  "ProductDiagnosis": {
+    "hero": {
+      "title": "選択の迷いを解消し、金融商品を一目で理解",
+      "subtitle": "ファンドも貯蓄も、AIが専門家レベルの診断レポートを提供します"
+    },
+    "steps": {
+      "input": "商品を入力",
+      "report": "レポート生成",
+      "recommendations": "AI提案"
+    },
+    "search": {
+      "title": "商品名を入力してワンクリック診断",
+      "subtitle": "気になる商品やコードを入力すると、AIが自動でデータを取得し分析を開始します",
+      "placeholder": "ファンド名またはコードを入力（例：{example}）",
+      "loading": "AIが分析を実行中...",
+      "cta": "診断を開始"
+    },
+    "analysis": {
+      "title": "AI診断レポート：{name}",
+      "subtitle": "パフォーマンス・リスク・コストを多角的に可視化",
+      "overview": {
+        "overallScore": "総合スコア",
+        "recommendedRating": "AI推奨評価",
+        "recommendation": "増やす",
+        "riskLevel": "リスクレベル"
+      },
+      "summaryTitle": "ハイライト概要",
+      "metrics": {
+        "performance": "年率リターン",
+        "maxDrawdown": "最大ドローダウン",
+        "volatility": "年率ボラティリティ",
+        "sharpe": "シャープレシオ"
+      },
+      "radar": {
+        "title": "推奨プランとの比較",
+        "performance": "パフォーマンス",
+        "risk": "リスク管理",
+        "cost": "コスト水準",
+        "liquidity": "流動性",
+        "current": "現行商品",
+        "recommended": "推奨プラン"
+      }
+    },
+    "recommendations": {
+      "title": "AIが選ぶ代替候補",
+      "subtitle": "同カテゴリーから実績とコストバランスに優れた商品を厳選",
+      "scoreLabel": "総合スコア：{score}",
+      "advantagesTitle": "主な強み",
+      "metrics": {
+        "performance": "実績",
+        "risk": "リスク",
+        "cost": "コスト",
+        "liquidity": "流動性"
+      }
+    },
+    "navigation": {
+      "previous": "戻る",
+      "next": "次へ",
+      "startDemo": "商品診断デモを開始"
+    }
+  },
+  "Data": {
+    "riskLevels": {
+      "conservative": "安定型",
+      "balanced": "バランス型",
+      "aggressive": "積極型"
+    },
+    "planning": {
+      "assetAllocation": {
+        "equityFunds": "株式ファンド",
+        "bondFunds": "債券ファンド",
+        "moneyMarket": "マネーマーケット",
+        "alternative": "オルタナティブ投資"
+      }
+    },
+    "portfolio": {
+      "assetDistribution": {
+        "stocks": "株式",
+        "funds": "投資信託",
+        "bonds": "債券",
+        "cash": "現金"
+      },
+      "holdings": {
+        "apple": "アップル",
+        "chinaGrowthFund": "華夏成長混合ファンド",
+        "tesla": "テスラ"
+      }
+    },
+    "marketSentiment": {
+      "descriptions": {
+        "elevatedRisk": "市場センチメントは高水準にあり、短期的な調整リスクが高まっています。"
+      }
+    },
+    "news": {
+      "categories": {
+        "monetaryPolicy": "金融政策",
+        "portfolioHoldings": "保有資産"
+      },
+      "events": {
+        "centralBankRateCut": {
+          "title": "最近の「中央銀行利下げ」をAIが解説",
+          "summary": "中央銀行が25bpの利下げを発表し、市場流動性がさらに緩和",
+          "aiInsight": "利下げは株式と債券に追い風。金利感応度の高い不動産・公益インフラ銘柄に注目しましょう。"
+        },
+        "portfolioFundEarnings": {
+          "title": "保有ファンド「華夏成長混合」が好決算を発表",
+          "summary": "主力銘柄の業績が想定を上回り、基準価額の上昇が期待されます",
+          "aiInsight": "AI評価を「増やす」に引き上げ。保有継続または適度な買い増しを推奨します。"
+        }
+      },
+      "detailed": {
+        "macroPolicy": {
+          "gdpRevision": {
+            "title": "日本の第2四半期GDPが年率2.2%に上方修正、内需が成長を牽引",
+            "summary": "内閣府は第2四半期（4-6月）の実質GDP成長率を年率2.2%へ上方修正。設備投資と個人消費が想定以上に堅調で、成長エンジンが輸出から内需へ移行しつつあります。",
+            "aiAdvice": "小売・サービス・省力化投資関連セクターへの配分を高め、同時に世界需要減速が輸出企業の利益に与える影響をシナリオに織り込みましょう。",
+            "date": "2025年9月8日"
+          },
+          "fedRateCut": {
+            "title": "FRBが利下げサイクル入り、政策分化が為替変動を拡大",
+            "summary": "FOMCは政策金利を25bp引き下げ、年末までに追加利下げを示唆。主要中銀の政策スタンスは一段と分岐しています。",
+            "aiAdvice": "ドル／円の為替リスクをヘッジし、政策分化シナリオ下でのアセットアロケーションとリスクバジェットを再点検しましょう。",
+            "date": "2025年9月17日"
+          }
+        },
+        "industryGeopolitics": {
+          "semiconductorTensions": {
+            "title": "米中の半導体摩擦が激化、サプライチェーンは不可逆な再編へ",
+            "summary": "米国は国内回帰しない企業の輸入半導体に高関税を検討、中国は米半導体企業への調査を開始し、業界は長期的な戦略調整を迫られています。",
+            "aiAdvice": "日本の政策支援を受ける半導体装置・材料メーカーへの投資を検討し、地政学リスクをモニタリングする供給網管理を構築しましょう。",
+            "date": "2025年9月15日"
+          },
+          "micronSubsidy": {
+            "title": "日本政府が5,360億円の補助でマイクロンの広島工場を拡張支援",
+            "summary": "経産省はAI・自動運転向け先端メモリの国内生産力強化を狙い、マイクロンの設備更新と増産を支援します。",
+            "aiAdvice": "マイクロンの国内サプライチェーン企業や、同様の政府支援が見込まれる戦略産業を早期にリサーチし、“地政学的CAPEX”テーマでの投資機会を探りましょう。",
+            "date": "2025年9月12日"
+          },
+          "jpEuEnergyAlliance": {
+            "title": "日欧エネルギー対話が安全なクリーンエネルギー供給網構築で一致",
+            "summary": "日本とEUは風力・太陽光・水素の分野で協力を強化し、特定国家への依存を減らすレジリエントなサプライチェーンを構築する方針です。",
+            "aiAdvice": "ESG評価に経済安全保障の視点を組み込み、「安全でグリーンな供給網」に位置付けられる企業への長期投資を検討しましょう。",
+            "date": "2025年9月16日"
+          }
+        },
+        "techRegulationSecurity": {
+          "microsoftPatch": {
+            "title": "マイクロソフトが81件の脆弱性を修正、ゼロデイ2件に即応が必要",
+            "summary": "9月の月例パッチで重大度クリティカル9件を含む81件の脆弱性を修正。ゼロデイはすでに悪用されている可能性があります。",
+            "aiAdvice": "速やかなパッチ適用と運用監視の強化を推奨するとともに、顧客向けに継続的なセキュリティ運用サービスの重要性を訴求しましょう。",
+            "date": "2025年9月9日"
+          },
+          "windowsEos": {
+            "title": "Windows 10が2025年10月でサポート終了、企業に安全な移行の期限",
+            "summary": "サポート終了後は新たな脆弱性が修正されず、世界的に大規模なシステム更新需要が発生しています。",
+            "aiAdvice": "OS移行、ゼロトラスト型の認証・セキュリティ設計、運用保守を一体化した「安全なワークプレイス現代化」サービスを提案しましょう。",
+            "date": "2025年9月11日"
+          },
+          "unAiGovernance": {
+            "title": "国連がAIガバナンスの中核組織を設立、国際的な枠組みが始動",
+            "summary": "国連総会は科学者パネルと政策対話メカニズムの二本柱を創設し、各国がAI政策を調整する常設プラットフォームを用意しました。",
+            "aiAdvice": "金融コンプライアンスの知見を生かし、「AIガバナンス・アズ・ア・サービス」を開発して複雑化する規制対応を顧客の付加価値へ転換しましょう。",
+            "date": "2025年9月3日"
+          }
+        },
+        "laborMarketStructure": {
+          "skillsGap": {
+            "title": "日米で顕在化するスキルギャップ、日本では学習意欲の不足が課題",
+            "summary": "Indeedの調査で、日本では29.3%が「新たなスキル習得に意欲がない」と回答し、米国の3.7%を大きく上回りました。人材力が成長のボトルネックになりつつあります。",
+            "aiAdvice": "中長期シナリオに人材力の制約を組み込み、企業にはリスキリングへの戦略的投資を提案しましょう。",
+            "date": "2025年9月18日"
+          },
+          "zeroCommission": {
+            "title": "GMOクリック証券が完全ゼロ手数料へ、証券ビジネスの再定義が加速",
+            "summary": "国内株式・投資信託の売買手数料を全面無料化。ブローカー業務のコモディティ化が急速に進んでいます。",
+            "aiAdvice": "DIRが持つリサーチ・コンサル・テクノロジーサービスなど非コモディティ領域の価値を強調し、収益源の再構築を支援しましょう。",
+            "date": "2025年9月"
+          }
+        }
+      }
+    },
+    "productDiagnosis": {
+      "names": {
+        "huaxiaGrowthFund": "華夏成長混合ファンド",
+        "yifangdaBluechipFund": "易方達ブルーチップセレクト",
+        "fuguoGrowthFund": "富国天恵成長ファンド"
+      },
+      "summaries": {
+        "huaxiaGrowthFundSummary": "成長株への投資に強みがあり、リスク管理も良好。中長期保有に適したファンドです。"
+      },
+      "advantages": {
+        "lowerFees": "低コスト",
+        "stablePerformance": "安定した実績",
+        "betterRiskControl": "優れたリスク管理",
+        "strongTrackRecord": "好調なトラックレコード",
+        "experiencedManager": "経験豊富な運用チーム"
+      }
+    }
+  }
+}

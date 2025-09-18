@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市场洞察功能测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .test-link {
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .test-link:hover {
+            background: #0056b3;
+        }
+        .description {
+            margin-top: 15px;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #1565c0;
+        }
+        .flow {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .flow h4 {
+            margin: 0 0 10px 0;
+            color: #856404;
+        }
+        .flow ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .flow li {
+            margin-bottom: 5px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 市场洞察功能测试</h1>
+        
+        <div class="section">
+            <h2>📊 基础页面测试</h2>
+            <p>测试市场洞察的基础功能和页面跳转：</p>
+            <a href="http://localhost:3000/market-insights/" class="test-link" target="_blank">市场洞察主页</a>
+            <a href="http://localhost:3000/market-insights/detailed" class="test-link" target="_blank">详细洞察报告</a>
+            
+            <div class="description">
+                <strong>测试说明：</strong><br>
+                • 主页显示市场概览和"一键生成本周市场洞察"按钮<br>
+                • 详细页面显示完整的AI分析报告和返回按钮
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 自动跳转测试</h2>
+            <p>测试URL参数自动跳转功能：</p>
+            <a href="http://localhost:3000/market-insights/?insights=true" class="test-link" target="_blank">自动跳转到详细页面</a>
+            
+            <div class="description">
+                <strong>测试说明：</strong><br>
+                • 访问带有 insights=true 参数的URL<br>
+                • 页面会显示加载动画2秒后自动跳转到详细报告页面
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏠 首页集成测试</h2>
+            <p>测试从首页功能卡片的跳转：</p>
+            <a href="http://localhost:3000/" class="test-link" target="_blank">访问首页</a>
+            
+            <div class="description">
+                <strong>测试说明：</strong><br>
+                • 在首页点击"市场洞察"功能卡片<br>
+                • 应该直接跳转到详细洞察报告页面
+            </div>
+        </div>
+
+        <div class="flow">
+            <h4>🔄 完整用户流程测试</h4>
+            <ol>
+                <li>访问首页，点击"市场洞察"卡片 → 直接看到详细报告</li>
+                <li>在详细报告页面点击"返回市场洞察" → 回到主页面</li>
+                <li>在主页面点击"一键生成本周市场洞察" → 加载2秒后跳转到详细页面</li>
+                <li>测试浏览器前进/后退按钮是否正常工作</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>✅ 预期结果</h2>
+            <ul>
+                <li><strong>页面分离：</strong>主页面内容简洁，详细内容在独立页面展示</li>
+                <li><strong>流畅跳转：</strong>点击按钮后有加载动画，然后平滑跳转</li>
+                <li><strong>返回功能：</strong>详细页面有明显的返回按钮</li>
+                <li><strong>URL同步：</strong>每个状态都有对应的URL，可以直接访问</li>
+                <li><strong>响应式设计：</strong>在不同设备上都能正常显示</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎯 优化效果</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                <div style="background: #ffebee; padding: 15px; border-radius: 6px;">
+                    <h4 style="color: #c62828; margin: 0 0 10px 0;">优化前</h4>
+                    <ul style="margin: 0; color: #c62828; font-size: 14px;">
+                        <li>页面内容过多，滚动很长</li>
+                        <li>详细内容混在主页面中</li>
+                        <li>用户体验不够清晰</li>
+                    </ul>
+                </div>
+                <div style="background: #e8f5e8; padding: 15px; border-radius: 6px;">
+                    <h4 style="color: #2e7d32; margin: 0 0 10px 0;">优化后</h4>
+                    <ul style="margin: 0; color: #2e7d32; font-size: 14px;">
+                        <li>主页面简洁明了</li>
+                        <li>详细内容独立展示</li>
+                        <li>页面结构更加清晰</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
