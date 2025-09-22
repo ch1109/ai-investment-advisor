@@ -57,7 +57,7 @@ export default function DetailedMarketInsightsContent() {
   };
 
   // 合并所有分类的新闻数据，并添加分类信息
-  const categoryLabels = {
+  const categoryLabels: Record<string, string> = {
     macroPolicy: t('sections.macroPolicy.title'),
     industryGeopolitics: t('sections.industryGeopolitics.title'),
     techRegulationSecurity: t('sections.techRegulationSecurity.title'),
@@ -127,9 +127,9 @@ export default function DetailedMarketInsightsContent() {
                       <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
                         {t('sections.shared.insight')}
                       </span>
-                      {(insight as any).category && (
+                      {(insight as {category?: string}).category && (
                         <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700">
-                          {categoryLabels[(insight as any).category] || t('sections.shared.other')}
+                          {categoryLabels[(insight as {category?: string}).category || ''] || t('sections.shared.other')}
                         </span>
                       )}
                     </div>
