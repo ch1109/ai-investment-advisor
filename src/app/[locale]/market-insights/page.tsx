@@ -11,8 +11,10 @@ import Card from '@/components/ui/Card';
 import {marketSentiment, newsEvents} from '@/data/mockData';
 import {BellIcon, NewspaperIcon, SparklesIcon, ChevronDownIcon, ChevronUpIcon} from '@heroicons/react/24/outline';
 
-// Force dynamic rendering for this page
+// 禁用静态生成
 export const dynamic = 'force-dynamic';
+
+
 
 function MarketInsightsPageContent() {
   const router = useRouter();
@@ -107,7 +109,7 @@ function MarketInsightsPageContent() {
               <p className="text-gray-600">{t('events.subtitle')}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
               {newsEvents.map((event) => {
                 const isExpanded = expandedNews[event.id];
                 const summary = dataT(`news.events.${event.summaryKey}`);

@@ -86,7 +86,7 @@ npm run build
    ```
 
 2. **详细部署指南**
-   - 查看 [VERCEL_DEPLOYMENT_GUIDE.md](./VERCEL_DEPLOYMENT_GUIDE.md) 获取完整部署说明
+   - 查看 [docs/VERCEL_DEPLOYMENT_GUIDE.md](./docs/VERCEL_DEPLOYMENT_GUIDE.md) 获取完整部署说明
    - 包含环境配置、自定义域名、性能优化等
 
 3. **部署特性**
@@ -100,7 +100,7 @@ npm run build
 
 项目同时支持多种部署方式：
 
-- **Netlify**: 查看 [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **Netlify**: 查看 [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)
 - **GitHub Pages**: 支持静态导出
 - **AWS S3 + CloudFront**: 企业级部署
 - **阿里云 OSS**: 国内访问优化
@@ -108,22 +108,36 @@ npm run build
 ## 📁 项目结构
 
 ```
-src/
-├── app/                    # Next.js App Router 页面
-│   ├── globals.css        # 全局样式
-│   ├── layout.tsx         # 根布局
-│   ├── page.tsx           # 首页
-│   ├── investment-planning/
-│   ├── portfolio-management/
-│   ├── market-insights/
-│   └── product-diagnosis/
-├── components/            # 可复用组件
-│   ├── ui/               # 基础 UI 组件
-│   ├── layout/           # 布局组件
-│   └── home/             # 首页组件
-├── data/                 # 模拟数据
-├── types/                # TypeScript 类型定义
-└── ...
+ai-investment-advisor/
+├── docs/                   # 项目文档
+│   ├── PRD.md             # 产品需求文档
+│   ├── DEPLOYMENT.md      # 部署指南
+│   ├── VERCEL_DEPLOYMENT_GUIDE.md
+│   └── ...                # 其他部署相关文档
+├── tests/                  # 测试文件
+│   ├── demo-test.html     # 演示测试页面
+│   ├── layout-comparison.html
+│   └── ...                # 其他测试文件
+├── src/                   # 源代码
+│   ├── app/               # Next.js App Router 页面
+│   │   ├── globals.css    # 全局样式
+│   │   ├── layout.tsx     # 根布局
+│   │   ├── page.tsx       # 首页
+│   │   ├── market-insights/
+│   │   └── product-diagnosis/
+│   ├── components/        # 可复用组件
+│   │   ├── ui/           # 基础 UI 组件
+│   │   ├── layout/       # 布局组件
+│   │   └── home/         # 首页组件
+│   ├── data/             # 模拟数据
+│   ├── types/            # TypeScript 类型定义
+│   └── utils/            # 工具函数
+├── public/               # 静态资源
+├── scripts/              # 构建和部署脚本
+├── package.json          # 项目依赖
+├── next.config.ts        # Next.js 配置
+├── tailwind.config.js    # Tailwind CSS 配置
+└── README.md             # 项目说明
 ```
 
 ## 🎨 设计特性

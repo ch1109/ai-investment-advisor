@@ -1,7 +1,8 @@
 'use client';
 
 import {motion} from 'framer-motion';
-import {useCallback, useEffect, useMemo, useRef, useState, Suspense} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import dynamicImport from 'next/dynamic';
 import {useLocale, useTranslations} from 'next-intl';
 import {useRouter} from '@/i18n/routing';
 import {useSearchParams} from 'next/navigation';
@@ -21,10 +22,13 @@ import {ChartBarIcon, DocumentTextIcon, MagnifyingGlassIcon, StarIcon} from '@he
 
 const TOTAL_STEPS = 2;
 
-// Force dynamic rendering for this page
+// 禁用静态生成
 export const dynamic = 'force-dynamic';
 
-function ProductDiagnosisPageContent() {
+
+
+function ProductDiagnosisPageContentOriginal() {
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
   const locale = useLocale();
@@ -97,6 +101,12 @@ function ProductDiagnosisPageContent() {
   );
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     const stepParam = searchParams.get('step');
     if (!stepParam) {
       setCurrentStep(1);
@@ -113,7 +123,7 @@ function ProductDiagnosisPageContent() {
       }
       scrollToStep(parsed);
     }
-  }, [scrollToStep, searchParams]);
+  }, [mounted, scrollToStep, searchParams]);
 
   const handleDiagnosis = () => {
     const trimmedQuery = searchQuery.trim();
@@ -172,6 +182,17 @@ function ProductDiagnosisPageContent() {
       }
     ];
   }, [t]);
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">加载中...</h2>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -432,10 +453,23 @@ function ProductDiagnosisPageContent() {
   );
 }
 
+// 使用动态导入禁用SSR
+const ProductDiagnosisPageContent = dynamicImport(() => Promise.resolve(ProductDiagnosisPageContentComponent), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">加载中...</h2>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>
+  )
+});
+
+function ProductDiagnosisPageContentComponent() {
+  return <ProductDiagnosisPageContentOriginal />;
+}
+
 export default function ProductDiagnosisPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductDiagnosisPageContent />
-    </Suspense>
-  );
+  return <ProductDiagnosisPageContent />;
 }

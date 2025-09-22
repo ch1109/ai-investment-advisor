@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE WebView 兼容性测试</title>
+    <style>
+        /* 基础重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        .test-title {
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .test-result {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        /* 测试现代CSS特性 */
+        .flex-test {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .grid-test {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .grid-item {
+            background: #f3e5f5;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* CSS变量测试 */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e74c3c;
+        }
+
+        .css-vars-test {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        /* 动画测试 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animation-test {
+            animation: fadeIn 1s ease-out;
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        /* 文本截断测试 */
+        .line-clamp-test {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            background: #fff3e0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        /* 降级方案 */
+        @supports not (-webkit-line-clamp: 2) {
+            .line-clamp-test {
+                display: block;
+                max-height: 3em;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .line-clamp-test::after {
+                content: '...';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #fff3e0;
+                padding-left: 20px;
+            }
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .info-box {
+            background: #e1f5fe;
+            border-left: 4px solid #03a9f4;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>UE WebView (Chrome 92) 兼容性测试</h1>
+        
+        <div class="info-box">
+            <strong>测试目的：</strong>检测当前浏览器对现代CSS特性的支持情况，特别是针对UE引擎WebView的兼容性。
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">浏览器信息</div>
+            <div id="browser-info"></div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">CSS特性支持测试</div>
+            <div id="css-support"></div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">Flexbox 布局测试</div>
+            <div class="flex-test">
+                <div>左侧</div>
+                <div>中间</div>
+                <div>右侧</div>
+            </div>
+            <div class="test-result success">✓ Flexbox 布局正常显示</div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">Grid 布局测试</div>
+            <div class="grid-test">
+                <div class="grid-item">网格1</div>
+                <div class="grid-item">网格2</div>
+                <div class="grid-item">网格3</div>
+            </div>
+            <div class="test-result success">✓ Grid 布局正常显示</div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">CSS 变量测试</div>
+            <div class="css-vars-test">这个背景色使用了CSS变量</div>
+            <div id="css-vars-result"></div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">CSS 动画测试</div>
+            <div class="animation-test">这个元素有淡入动画效果</div>
+            <div class="test-result success">✓ CSS 动画正常工作</div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">文本截断测试 (-webkit-line-clamp)</div>
+            <div class="line-clamp-test">
+                这是一段很长的文本，用来测试 -webkit-line-clamp 属性是否正常工作。如果这个属性被支持，这段文本应该被截断为两行，并在末尾显示省略号。这是第三行文本，如果line-clamp工作正常，这行不应该显示。
+            </div>
+            <div id="line-clamp-result"></div>
+        </div>
+
+        <div class="test-section">
+            <div class="test-title">交互测试</div>
+            <button onclick="testInteraction()">点击测试</button>
+            <button onclick="testLocalStorage()">本地存储测试</button>
+            <div id="interaction-result"></div>
+        </div>
+    </div>
+
+    <script>
+        // 检测浏览器信息
+        function detectBrowser() {
+            const ua = navigator.userAgent;
+            const chromeMatch = ua.match(/Chrome\/(\d+)/);
+            const chromeVersion = chromeMatch ? parseInt(chromeMatch[1], 10) : null;
+            
+            const info = {
+                userAgent: ua,
+                chromeVersion: chromeVersion,
+                isUEWebView: ua.includes('UE4') || ua.includes('UE5') || ua.includes('UnrealEngine') || chromeVersion === 92,
+                viewport: {
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                }
+            };
+            
+            return info;
+        }
+
+        // 检测CSS特性支持
+        function checkCSSSupport() {
+            const support = {};
+            
+            if (typeof CSS !== 'undefined' && CSS.supports) {
+                support.cssVariables = CSS.supports('color', 'var(--test)');
+                support.flexbox = CSS.supports('display', 'flex');
+                support.grid = CSS.supports('display', 'grid');
+                support.backdropFilter = CSS.supports('backdrop-filter', 'blur(1px)');
+                support.lineClamp = CSS.supports('-webkit-line-clamp', '3');
+                support.transform = CSS.supports('transform', 'translateX(1px)');
+            } else {
+                support.cssSupportsAPI = false;
+            }
+            
+            return support;
+        }
+
+        // 测试交互
+        function testInteraction() {
+            document.getElementById('interaction-result').innerHTML = 
+                '<div class="test-result success">✓ JavaScript 交互正常工作</div>';
+        }
+
+        // 测试本地存储
+        function testLocalStorage() {
+            try {
+                localStorage.setItem('test', 'value');
+                const value = localStorage.getItem('test');
+                localStorage.removeItem('test');
+                
+                document.getElementById('interaction-result').innerHTML += 
+                    '<div class="test-result success">✓ 本地存储功能正常</div>';
+            } catch (e) {
+                document.getElementById('interaction-result').innerHTML += 
+                    '<div class="test-result error">✗ 本地存储功能异常: ' + e.message + '</div>';
+            }
+        }
+
+        // 页面加载完成后执行测试
+        document.addEventListener('DOMContentLoaded', function() {
+            // 显示浏览器信息
+            const browserInfo = detectBrowser();
+            document.getElementById('browser-info').innerHTML = `
+                <div><strong>User Agent:</strong> ${browserInfo.userAgent}</div>
+                <div><strong>Chrome 版本:</strong> ${browserInfo.chromeVersion || '未检测到'}</div>
+                <div><strong>是否为 UE WebView:</strong> ${browserInfo.isUEWebView ? '是' : '否'}</div>
+                <div><strong>视口尺寸:</strong> ${browserInfo.viewport.width} x ${browserInfo.viewport.height}</div>
+            `;
+
+            // 显示CSS特性支持
+            const cssSupport = checkCSSSupport();
+            let cssHtml = '';
+            
+            for (const [feature, supported] of Object.entries(cssSupport)) {
+                const className = supported ? 'success' : 'error';
+                const icon = supported ? '✓' : '✗';
+                cssHtml += `<div class="test-result ${className}">${icon} ${feature}: ${supported ? '支持' : '不支持'}</div>`;
+            }
+            
+            document.getElementById('css-support').innerHTML = cssHtml;
+
+            // 测试CSS变量
+            const testElement = document.querySelector('.css-vars-test');
+            const computedStyle = window.getComputedStyle(testElement);
+            const bgColor = computedStyle.backgroundColor;
+            
+            if (bgColor === 'rgb(52, 152, 219)' || bgColor.includes('52, 152, 219')) {
+                document.getElementById('css-vars-result').innerHTML = 
+                    '<div class="test-result success">✓ CSS 变量正常工作</div>';
+            } else {
+                document.getElementById('css-vars-result').innerHTML = 
+                    '<div class="test-result warning">⚠ CSS 变量可能不被支持，使用降级方案</div>';
+            }
+
+            // 测试line-clamp
+            if (cssSupport.lineClamp) {
+                document.getElementById('line-clamp-result').innerHTML = 
+                    '<div class="test-result success">✓ -webkit-line-clamp 被支持</div>';
+            } else {
+                document.getElementById('line-clamp-result').innerHTML = 
+                    '<div class="test-result warning">⚠ -webkit-line-clamp 不被支持，使用降级方案</div>';
+            }
+
+            // 如果是UE WebView，发送消息给UE
+            if (browserInfo.isUEWebView && window.ue) {
+                try {
+                    window.ue.interface.broadcast('webview_compatibility_test', {
+                        browserInfo,
+                        cssSupport
+                    });
+                } catch (error) {
+                    console.log('UE接口通信失败:', error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

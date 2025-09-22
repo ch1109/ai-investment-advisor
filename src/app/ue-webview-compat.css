@@ -1,0 +1,394 @@
+/* UE WebView (Chrome 92) 兼容性样式 - 强制应用模式 */
+
+/* 确保基础样式正常工作 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 修复flexbox在老版本Chrome中的问题 - 使用!important强制应用 */
+.ue-webview-compat .flex,
+.flex {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.ue-webview-compat .flex-col,
+.flex-col {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.ue-webview-compat .flex-row,
+.flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: row !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+}
+
+.ue-webview-compat .justify-center,
+.justify-center {
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.ue-webview-compat .justify-between,
+.justify-between {
+  -webkit-box-pack: justify !important;
+  -webkit-justify-content: space-between !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+.ue-webview-compat .items-center,
+.items-center {
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.ue-webview-compat .items-start,
+.items-start {
+  -webkit-box-align: start !important;
+  -webkit-align-items: flex-start !important;
+  -ms-flex-align: start !important;
+  align-items: flex-start !important;
+}
+
+.ue-webview-compat .flex-1,
+.flex-1 {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 1 0% !important;
+  -ms-flex: 1 1 0% !important;
+  flex: 1 1 0% !important;
+}
+
+/* 修复grid布局 - 对Chrome 92的降级方案 */
+.ue-webview-compat .grid {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+/* 对不支持grid的情况使用flexbox降级 */
+@supports not (display: grid) {
+  .ue-webview-compat .grid {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* 修复常用的grid类 */
+.ue-webview-compat .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
+.ue-webview-compat .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.ue-webview-compat .grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.ue-webview-compat .gap-4 {
+  gap: 1rem !important;
+}
+
+.ue-webview-compat .gap-6 {
+  gap: 1.5rem !important;
+}
+
+/* 修复transform动画 */
+.ue-webview-compat .transform,
+.transform {
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+/* 修复transition */
+.ue-webview-compat .transition-all,
+.transition-all {
+  -webkit-transition: all 0.15s ease-in-out !important;
+  -moz-transition: all 0.15s ease-in-out !important;
+  -o-transition: all 0.15s ease-in-out !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.ue-webview-compat .transition,
+.transition {
+  -webkit-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  -webkit-transition-duration: 150ms !important;
+  transition-duration: 150ms !important;
+}
+
+/* 修复border-radius */
+.ue-webview-compat .rounded,
+.rounded {
+  -webkit-border-radius: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+
+.ue-webview-compat .rounded-lg,
+.rounded-lg {
+  -webkit-border-radius: 0.5rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.ue-webview-compat .rounded-xl,
+.rounded-xl {
+  -webkit-border-radius: 0.75rem !important;
+  border-radius: 0.75rem !important;
+}
+
+.ue-webview-compat .rounded-2xl,
+.rounded-2xl {
+  -webkit-border-radius: 1rem !important;
+  border-radius: 1rem !important;
+}
+
+/* 修复shadow */
+.ue-webview-compat .shadow,
+.shadow {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.ue-webview-compat .shadow-lg,
+.shadow-lg {
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.ue-webview-compat .shadow-xl,
+.shadow-xl {
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 修复backdrop-filter */
+.ue-webview-compat .backdrop-blur,
+.backdrop-blur {
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* 对不支持backdrop-filter的降级方案 */
+@supports not (backdrop-filter: blur(1px)) {
+  .ue-webview-compat .backdrop-blur,
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+
+/* 确保字体正常显示 */
+.ue-webview-compat body,
+.ue-webview-compat html,
+body, html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* 修复常用的Tailwind CSS类 */
+.ue-webview-compat .text-center,
+.text-center {
+  text-align: center !important;
+}
+
+.ue-webview-compat .text-left,
+.text-left {
+  text-align: left !important;
+}
+
+.ue-webview-compat .text-right,
+.text-right {
+  text-align: right !important;
+}
+
+/* 颜色类修复 */
+.ue-webview-compat .text-gray-600,
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.ue-webview-compat .text-gray-800,
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.ue-webview-compat .text-white,
+.text-white {
+  color: #ffffff !important;
+}
+
+.ue-webview-compat .bg-white,
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.ue-webview-compat .bg-gray-50,
+.bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.ue-webview-compat .bg-blue-600,
+.bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+.ue-webview-compat .bg-green-600,
+.bg-green-600 {
+  background-color: #059669 !important;
+}
+
+/* 间距类修复 */
+.ue-webview-compat .p-4,
+.p-4 {
+  padding: 1rem !important;
+}
+
+.ue-webview-compat .p-6,
+.p-6 {
+  padding: 1.5rem !important;
+}
+
+.ue-webview-compat .px-4,
+.px-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.ue-webview-compat .py-2,
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.ue-webview-compat .m-4,
+.m-4 {
+  margin: 1rem !important;
+}
+
+.ue-webview-compat .mx-auto,
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.ue-webview-compat .mb-4,
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.ue-webview-compat .mb-6,
+.mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* 宽高类修复 */
+.ue-webview-compat .w-full,
+.w-full {
+  width: 100% !important;
+}
+
+.ue-webview-compat .h-full,
+.h-full {
+  height: 100% !important;
+}
+
+.ue-webview-compat .min-h-screen,
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+.ue-webview-compat .max-w-md,
+.max-w-md {
+  max-width: 28rem !important;
+}
+
+.ue-webview-compat .max-w-4xl,
+.max-w-4xl {
+  max-width: 56rem !important;
+}
+
+/* 修复CSS变量降级 */
+@supports not (color: var(--background)) {
+  .ue-webview-compat,
+  :root {
+    background-color: #ffffff !important;
+    color: #171717 !important;
+  }
+
+  .ue-webview-compat .bg-background,
+  .bg-background {
+    background-color: #ffffff !important;
+  }
+
+  .ue-webview-compat .text-foreground,
+  .text-foreground {
+    color: #171717 !important;
+  }
+}
+
+/* 强制应用基础样式 */
+.ue-webview-compat * {
+  box-sizing: border-box !important;
+}
+
+/* 修复按钮样式 - 排除自定义样式按钮 */
+.ue-webview-compat button:not([class*="bg-"]):not([class*="px-"]):not([class*="py-"]),
+button:not([class*="bg-"]):not([class*="px-"]):not([class*="py-"]) {
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 确保自定义按钮样式不被覆盖 */
+.ue-webview-compat button[class*="bg-"],
+.ue-webview-compat button[class*="px-"],
+.ue-webview-compat button[class*="py-"],
+button[class*="bg-"],
+button[class*="px-"],
+button[class*="py-"] {
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* 修复输入框样式 */
+.ue-webview-compat input,
+.ue-webview-compat textarea,
+input, textarea {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem 0.75rem !important;
+  background-color: #ffffff !important;
+}
+
+/* 确保文本渲染正常 */
+.ue-webview-compat,
+.ue-webview-compat * {
+  -webkit-text-size-adjust: 100% !important;
+  text-rendering: optimizeLegibility !important;
+}

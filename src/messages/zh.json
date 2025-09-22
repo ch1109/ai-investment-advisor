@@ -539,7 +539,10 @@
         "aiLabel": "AI 投顾建议",
         "publishedAt": "发布时间：{date}",
         "expand": "展开详情",
-        "collapse": "收起"
+        "collapse": "收起",
+        "insight": "洞察",
+        "aiAnalysis": "AI分析",
+        "other": "其他"
       },
       "macroPolicy": {
         "title": "宏观经济与央行政策",

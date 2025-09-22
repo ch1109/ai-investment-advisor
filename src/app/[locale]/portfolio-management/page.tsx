@@ -284,7 +284,7 @@ export default function PortfolioManagementPage() {
                   <h4 className="text-lg font-semibold text-gray-900">{t('risk.reminders.title')}</h4>
                   <p className="text-sm text-gray-600 md:text-right">{t('risk.reminders.subtitle')}</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                   {reminders.map((reminder, index) => {
                     const IconComponent = reminder.icon;
                     const isActive = reminder.key === selectedReminder;

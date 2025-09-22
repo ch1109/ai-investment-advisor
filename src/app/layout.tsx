@@ -1,8 +1,10 @@
 import type {Metadata} from "next";
 
 import "./globals.css";
+import "./ue-webview-compat.css";
 
 import {routing} from "@/i18n/routing";
+import BrowserCompatibility from "@/components/BrowserCompatibility";
 
 export const metadata: Metadata = {
   title: "AI 投顾 - 您的智能投资决策伙伴",
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang={routing.defaultLocale}>
       <body className="antialiased bg-gray-50 min-h-screen">
+        <BrowserCompatibility />
         {children}
       </body>
     </html>

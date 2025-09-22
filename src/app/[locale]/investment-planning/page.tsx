@@ -1,7 +1,8 @@
 'use client';
 
 import {motion} from 'framer-motion';
-import {useCallback, useEffect, useMemo, useRef, useState, Suspense} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import dynamicImport from 'next/dynamic';
 import {useLocale, useTranslations, useMessages} from 'next-intl';
 import {usePathname, useRouter} from '@/i18n/routing';
 import {useSearchParams} from 'next/navigation';
@@ -63,10 +64,12 @@ type AmountOptionId = (typeof AMOUNT_OPTIONS)[number]['id'];
 type AgeOptionId = (typeof AGE_OPTIONS)[number]['id'];
 type RiskOptionId = (typeof RISK_OPTIONS)[number]['id'];
 
-// Force dynamic rendering for this page
+// 禁用静态生成
 export const dynamic = 'force-dynamic';
 
-function InvestmentPlanningPageContent() {
+
+
+function InvestmentPlanningPageContentOriginal() {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -371,7 +374,7 @@ function InvestmentPlanningPageContent() {
   );
 
   const renderGoalSelection = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
       {GOAL_OPTIONS.map((option) => {
         const isActive = selectedGoal === option.id;
         return (
@@ -408,7 +411,7 @@ function InvestmentPlanningPageContent() {
   );
 
   const renderAmountSelection = () => (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4">
       {AMOUNT_OPTIONS.map((option) => {
         const isActive = selectedAmount === option.id;
         return (
@@ -454,7 +457,7 @@ function InvestmentPlanningPageContent() {
   );
 
   const renderRiskSelection = () => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-3">
       {RISK_OPTIONS.map((option) => {
         const isActive = selectedRisk === option.id;
         return (
@@ -559,7 +562,7 @@ function InvestmentPlanningPageContent() {
                 <h4 className="text-lg font-semibold mb-4 text-center text-gray-900">
                   📋 {t('step1.summary.title')}
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 mb-6">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <div className="text-sm text-gray-600 mb-1">{t('step1.summary.goalLabel')}</div>
                     <div className="font-semibold text-blue-700">
@@ -843,10 +846,23 @@ function InvestmentPlanningPageContent() {
   );
 }
 
+// 使用动态导入禁用SSR
+const InvestmentPlanningPageContent = dynamicImport(() => Promise.resolve(InvestmentPlanningPageContentComponent), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">加载中...</h2>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>
+  )
+});
+
+function InvestmentPlanningPageContentComponent() {
+  return <InvestmentPlanningPageContentOriginal />;
+}
+
 export default function InvestmentPlanningPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <InvestmentPlanningPageContent />
-    </Suspense>
-  );
+  return <InvestmentPlanningPageContent />;
 }

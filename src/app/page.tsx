@@ -3,8 +3,10 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-// Force dynamic rendering for this page
+// 禁用静态生成
 export const dynamic = 'force-dynamic';
+
+
 
 export default function RootPage() {
   const router = useRouter();

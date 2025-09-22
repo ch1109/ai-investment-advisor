@@ -539,7 +539,10 @@
         "aiLabel": "AIによる提案",
         "publishedAt": "発表日：{date}",
         "expand": "詳細を展開",
-        "collapse": "折りたたむ"
+        "collapse": "折りたたむ",
+        "insight": "洞察",
+        "aiAnalysis": "AI分析",
+        "other": "その他"
       },
       "macroPolicy": {
         "title": "マクロ経済と中央銀行政策",
